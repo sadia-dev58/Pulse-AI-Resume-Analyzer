@@ -1,0 +1,16 @@
+{
+  "name": "ai-student-resume-analyzer",
+  "version": "1.0.0",
+  "description": "AI Student Resume Analyzer using Google Gemini API",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "cors": "^2.8.6",
+    "dotenv": "^17.2.4",
+    "express": "^4.22.1"
+  }
+}

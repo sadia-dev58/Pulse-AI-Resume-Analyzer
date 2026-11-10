@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PulseAI | Smart Resume Feedback</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> 
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section id="login-screen" class="auth-section">
+  <div class="login-card glass">
+    <i class="fa-solid fa-heart-pulse logo-icon main-glow"></i>
+    <h2>Pulse<span>AI</span> Login</h2>
+    <form onsubmit="unlockApp(event)">
+      <div class="input-box">
+        <input type="text" placeholder="Username" required>
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="Password" required>
+      </div>
+      <button type="submit" class="enter-btn">Access Analyzer</button>
+    </form>
+  </div>
+</section>
+
+<div id="app-content" style="display: none;">
+  </div>
+  <main>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo">
+        <i class="fa-solid fa-heart-pulse logo-icon"></i>
+        Pulse<span>AI</span>
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#how-it-works">How it Works</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#info1">Why Pulse AI</a></li>
+        <li><button class="nav-btn" onclick="location.href='#analyzer'">Analyze Now</button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="main-content">
+    <section id="home" class="hero-section">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1 class="glow-text">Unlock Your Career Potential</h1>
+          <p>PulseAI uses advanced Gemini 1.5 Flash to grade your resume against industry standards. Get real-time feedback and beat the ATS algorithms with smart insights.</p>
+          
+          <div class="hero-badges">
+            <span><i class="fa-solid fa-bolt"></i> Fast Analysis</span>
+            <span><i class="fa-solid fa-shield-halved"></i> ATS Optimized</span>
+          </div>
+          
+          <a href="#analyzer" class="cta-main-btn">Start Scanning <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="hero-visual">
+          <div class="layered-visual-container">
+            <div class="resume-layer layer-3"></div>
+            <div class="resume-layer layer-2"></div>
+            
+            <div class="resume-layer layer-1">
+              <div class="card-header-sim">
+                <div class="p-img"></div>
+                <div class="p-text">
+                  <div class="p-line-bold"></div>
+                  <div class="p-line-sm"></div>
+                </div>
+              </div>
+              <div class="card-body-sim">
+                <div class="p-line"></div>
+                <div class="p-line"></div>
+                <div class="p-line mid"></div>
+                <div class="p-line"></div>
+              </div>
+              <div class="neon-scanner"></div>
+            </div>
+
+            <div class="tag tag-keywords">Keywords</div>
+            <div class="tag tag-contact">Contact Info</div>
+            <div class="tag tag-skills">Skills</div>
+
+            <div class="floating-score-v2">
+              <span class="score-num">85%</span>
+              <span class="score-txt">ATS Match</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="info-section">
+      <div class="section-title">
+        <h1 class="glow-text">How It Works</h1>
+        <p>Simple 3-step process to optimize your career</p>
+      </div>
+
+      <div class="steps-container">
+        <div class="step-card">
+          <div class="step-icon">
+            <i class="fa-solid fa-file-arrow-up"></i>
+          </div>
+          <div class="step-num">1</div>
+          <h3>Upload</h3>
+          <p>Upload your resume in <strong>.txt</strong> format. Make sure it contains your latest skills.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div class="step-num">2</div>
+          <h3>Scan & Match</h3>
+          <p>Paste the target <strong>Job Description</strong> and let Gemini AI extract and match required standard skills dynamically.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-icon">
+            <i class="fa-solid fa-rocket"></i>
+          </div>
+          <div class="step-num">3</div>
+          <h3>Improve</h3>
+          <p>Get a detailed score and <strong>actionable tips</strong> to make your resume stand out.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="about-container">
+        <div class="about-video">
+          <video autoplay muted loop playsinline>
+            <source src="video4.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="about-text">
+          <h2>About Our Analysis</h2>
+          <p>
+           "Our powerful AI engine deep-scans your resume to unlock expert insights. By prioritizing industry standards and strategic keyword optimization, we ensure your profile stands out to recruiters and ATS systems alike."
+          </p>
+          <ul class="features-list">
+            <li><i class="fa-solid fa-bolt"></i> Real-time Feedback</li>
+            <li><i class="fa-solid fa-check-double"></i>ATS Friendly Checks</li>
+            <li><i class="fa-solid fa-chart-line"></i> Career Growth Tips</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="info-section fancy-accent" ID="info1">
+      <div class="info-header">
+        <h2>Why Choose <span>PulseAI</span>?</h2>
+        <p>Smarter insights. Faster decisions. Better resumes.</p>
+      </div>
+
+      <div class="features-grid fancy-grid">
+        <div class="feature-card">
+          <div class="icon-blob gradient-1">🚀</div>
+          <h3>Lightning Fast</h3>
+          <p>Your resume is analyzed and scored in under 5 seconds using AI.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="icon-blob gradient-2">📊</div>
+          <h3>ATS Compatibility</h3>
+          <p>Know exactly how your resume performs in Applicant Tracking Systems.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="icon-blob gradient-3">💡</div>
+          <h3>Smart Suggestions</h3>
+          <p>Actionable tips to improve formatting, keywords, and skills.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="separator">
+
+    <section id="analyzer" class="container analyzer-main">
+      <div class="analyzer-header">
+        <div class="icon-glow">
+          <i class="fa-solid fa-magnifying-glass-chart main-icon"></i>
+        </div>
+        <h2 class="glow-text">Ready to Grade Your Resume?</h2>
+        <p>AI-powered professional feedback tailored to your target job</p>
+      </div>
+
+      <div class="upload-card glass">
+        <div class="jd-input-wrapper" style="width: 100%; margin-bottom: 25px; text-align: left;">
+          <label for="jobDescriptionInput" style="display: block; color: #fff; font-weight: 600; margin-bottom: 10px; font-size: 1.1rem;">
+            <i class="fa-solid fa-briefcase" style="color: #38bdf8; margin-right: 8px;"></i> Paste Job Description Here:
+          </label>
+          <textarea id="jobDescriptionInput" placeholder="Paste the job requirements, technical skills, or full role description from LinkedIn/Glassdoor here..." style="width: 100%; height: 150px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 15px; color: #fff; font-family: 'Poppins', sans-serif; resize: vertical; outline: none; transition: all 0.3s ease; box-sizing: border-box;" onfocus="this.style.border='1px solid #38bdf8'; this.style.boxShadow='0 0 10px rgba(56, 189, 248, 0.3)'" onblur="this.style.border='1px solid rgba(255, 255, 255, 0.1)'; this.style.boxShadow='none'"></textarea>
+        </div>
+
+        <div class="file-input-wrapper">
+          <label for="resumeInput" class="custom-file-upload">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+            <span>Upload .txt Resume</span>
+          </label>
+          <input type="file" id="resumeInput" accept=".txt" />
+          <p id="fileNameDisplay">No file chosen</p>
+        </div>
+
+        <button class="analyze-btn" onclick="analyzeResume()">
+          <i class="fa-solid fa-wand-sparkles"></i>
+          Analyze Resume
+        </button>
+
+        <div id="loading" class="hidden">
+          <div class="spinner"></div>
+          <p>Extracting job standards & analyzing your career path...</p>
+        </div>
+      </div>
+    </section>
+    
+    <div id="result"></div>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <section class="optimization-section">
+      <div class="opt-container">
+        <div class="opt-header">
+          <h2 class="opt-title glow-text">Resume Optimization <span>Checklist</span></h2>
+          <p class="opt-description">16 crucial checks across 5 categories to perfect your professional profile.</p>
+        </div>
+
+        <div class="opt-unique-grid">
+          <div class="opt-card">
+            <div class="card-tag">High Impact</div>
+            <div class="card-icon"><i class="fa-solid fa-pen-nib"></i></div>
+            <h3>Content</h3>
+            <ul>
+              <li><i class="fa-solid fa-check"></i> ATS parse rate</li>
+              <li><i class="fa-solid fa-check"></i> Repetition check</li>
+              <li><i class="fa-solid fa-check"></i> Grammar & Spelling</li>
+              <li><i class="fa-solid fa-check"></i> Quantified impact</li>
+            </ul>
+          </div>
+
+          <div class="opt-card">
+            <div class="card-icon"><i class="fa-solid fa-file-pdf"></i></div>
+            <h3>Format</h3>
+            <ul>
+              <li><i class="fa-solid fa-check"></i> File type & size</li>
+              <li><i class="fa-solid fa-check"></i> Optimal length</li>
+              <li><i class="fa-solid fa-check"></i> Bullet point length</li>
+            </ul>
+          </div>
+
+          <div class="opt-card style-card-top">
+            <div class="card-icon"><i class="fa-solid fa-font"></i></div>
+            <h3>Style</h3>
+            <ul>
+              <li><i class="fa-solid fa-check"></i> Professional design</li>
+              <li><i class="fa-solid fa-check"></i> Active voice usage</li>
+              <li><i class="fa-solid fa-check"></i> Buzzwords check</li>
+            </ul>
+          </div>
+
+          <div class="opt-card wide-card">
+            <div class="card-icon"><i class="fa-solid fa-address-book"></i></div>
+            <div class="card-text-wrapper">
+                <h3>Resume Sections</h3>
+                <p>Ensuring all essential contact info and personality showcases are optimized.</p>
+                <ul class="horizontal-list">
+                  <li><i class="fa-solid fa-check"></i> Contact Info</li>
+                  <li><i class="fa-solid fa-check"></i> Core Sections</li>
+                  <li><i class="fa-solid fa-check"></i> Personality Tips</li>
+                </ul>
+            </div>
+          </div>
+
+          <div class="opt-card">
+            <div class="card-icon"><i class="fa-solid fa-lightbulb"></i></div>
+            <h3>Skills</h3>
+            <ul>
+              <li><i class="fa-solid fa-check"></i> Hard skills</li>
+              <li><i class="fa-solid fa-check"></i> Soft skills</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section> 
+
+    <footer class="footer">
+      <p>&copy; 2026 PulseAI Resume Analyzer. Powered by Google Gemini.</p>
+      <p>Made with <span><i class="fa-solid fa-heart fa-beat" style="color: #ff4d4d; --fa-animation-duration: 0.8s;"></i></span> by Sadia</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      const fileInput = document.getElementById('resumeInput');
+      const fileNameDisplay = document.getElementById('fileNameDisplay');
+      const jdInput = document.getElementById('jobDescriptionInput');
+      
+      fileInput.onchange = () => {
+        if(fileInput.files.length > 0) {
+          fileNameDisplay.innerText = fileInput.files[0].name;
+          fileNameDisplay.style.color = "#38bdf8"; 
+          fileNameDisplay.style.fontWeight = "bold";
+        }
+      }
+
+      // Tip for script.js integration:
+      // Jab aap analyzeResume() chalayengi, toh backend par text bhejte waqt dono variables collect karein:
+      // const resumeFile = fileInput.files[0];
+      // const jobDescriptionText = jdInput.value;
+    </script>
+  </div>
+</main>
+</body>
+</html>
